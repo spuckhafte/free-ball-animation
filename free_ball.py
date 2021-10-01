@@ -1,6 +1,17 @@
 # at high speeds and conditions, the game breaks
+# sometimes it can break spontaneously
+# if the gravity turns of start the program again
+# if the ball crosses the border, animation will reload automatically
+# if the animation goes smooth, use the key 'R' to reload the animation
 
-import pygame as py
+# Reason for the crossing border and wrong directional velocity bug: the ball checks the pixel color through cameras
+# in 4 spatial directions, sometimes due to circular shape, 2 different cameras in different directions take the
+# pixel in account creating wrong change in the direction of velocity: either out of the border or in the
+# non-intuitive direction. You can fix these this by increasing the camera position from the variable 'focal'. This
+# will increase the distance between the cameras increasing accuracy, but the animation will look less realistic,
+# ball will not appear change its direction before colliding.
+
+import pygame as py\
 import keyboard as key
 from random import randint
 
@@ -9,6 +20,7 @@ py.init()
 
 # setting up the pygame window
 window = py.display.set_mode((1200, 600))
+py.display.set_caption('Free Ball Animation')  # name of the window
 on = True
 
 # clock - manages the time of the animation
@@ -90,7 +102,7 @@ while on:
 
         # all the changes occur if the ball is in motion
         if vel_i != 0 or vel_j != 0:
-            
+
             # change in velocity of ball due to air resistance
             if vel_i == 0:
                 vel_j = slow_down(0.01, velj=vel_j)
@@ -157,10 +169,10 @@ while on:
         window.fill((0, 0, 0))
 
         # creates different objects in the window
-        py.draw.rect(window, (128, 255, 0), py.Rect(444, 253, 144, 53))
-        py.draw.rect(window, (0, 255, 0), py.Rect(30, 50, 1100, 500), 20)
-        pointer = py.draw.circle(window, (255, 0, 0), (cx, cy), r)
-        py.display.update()
+        py.draw.rect(window, (128, 255, 0), py.Rect(444, 253, 144, 53))  # obstacle
+        py.draw.rect(window, (0, 255, 0), py.Rect(30, 50, 1100, 500), 20)  # border
+        pointer = py.draw.circle(window, (255, 0, 0), (cx, cy), r)  # ball
+        py.display.update()  # updates the pygame window
 
         # reload with default conditions
         if key.is_pressed('r'):
