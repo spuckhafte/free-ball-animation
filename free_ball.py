@@ -88,8 +88,10 @@ while on:
             gravity = 0
             wind_j = 0
 
-        # change in velocity of ball due to air resistance
+        # all the changes occur if the ball is in motion
         if vel_i != 0 or vel_j != 0:
+            
+            # change in velocity of ball due to air resistance
             if vel_i == 0:
                 vel_j = slow_down(0.01, velj=vel_j)
             elif vel_j == 0:
