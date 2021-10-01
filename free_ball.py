@@ -11,7 +11,7 @@
 # will increase the distance between the cameras increasing accuracy, but the animation will look less realistic,
 # ball will not appear change its direction before colliding.
 
-import pygame as py\
+import pygame as py
 import keyboard as key
 from random import randint
 
