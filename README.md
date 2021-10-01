@@ -6,5 +6,5 @@ Animation of a ball with following conditions:
   <li>Friction</li>
   <li>Coefficient of Restitution</li>
   <li>Air resistance</li>
-  </ul><br>
+  </ul>
 <i>Created this to learn PyGame</i>
