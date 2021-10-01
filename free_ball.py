@@ -173,7 +173,7 @@ while on:
             if event.type == py.QUIT:
                 on = False
     except:
-        # if the game breaks, the conditions will be set to default
+        # if the animation breaks, the conditions will be set to default
         cx = 80
         cy = 529
         vel_i = 13
