@@ -29,7 +29,7 @@ vel_j = -25
 # wind in x direction _
 wind_i = -0.005
 
-# wind in y direction _
+# wind in y direction |
 wind_j = 0.005
 
 # radius of ball
