@@ -180,6 +180,7 @@ while on:
             cy = 529
             vel_i = 13
             vel_j = -25
+            gravity = 1
             continue
 
         # keeps the window responding
@@ -192,4 +193,5 @@ while on:
         cy = 529
         vel_i = 13
         vel_j = -25
+        gravity = 1
         continue
