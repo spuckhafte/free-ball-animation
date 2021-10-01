@@ -7,3 +7,4 @@ Animation of a ball with following conditions:
   <li>Coefficient of Restitution</li>
   <li>Air resistance</li>
   </ul>
+*Created this to learn PyGame*
