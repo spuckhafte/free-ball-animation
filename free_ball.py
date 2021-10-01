@@ -122,7 +122,7 @@ while on:
                     vel_i = slow_down(off_course(), veli=vel_i)
                     vel_j = slow_down(off_course(), velj=vel_j)
 
-                # all the logics down change the direction of velocity according after the ball collides
+                # all the logics down change the direction of velocity accordingly after the ball collides
                 if vel_i > 0 and vel_j < 0:
                     if pxl_up == 255:
                         vel_j = -e * vel_j
