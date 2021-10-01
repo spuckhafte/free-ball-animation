@@ -153,7 +153,7 @@ while on:
                 if vel_j == 0:
                     vel_i = -vel_i
 
-        # clears off the tail of the of the ball created when it moves
+        # clears off the tail of the ball created when it moves
         window.fill((0, 0, 0))
 
         # creates different objects in the window
