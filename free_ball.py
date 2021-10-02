@@ -1,15 +1,14 @@
-# at high speeds and conditions, the game breaks
-# sometimes it can break spontaneously
-# if the gravity turns of start the program again
-# if the ball crosses the border, animation will reload automatically
-# if the animation goes smooth, use the key 'R' to reload the animation
+# At high speeds and conditions, the game breaks.
+# Sometimes it can break unnecessarily.
+# If the ball crosses the border, animation will reload automatically.
+# If the animation goes smooth, use the key 'R' to reload the animation.
 
 # Reason for the crossing border and wrong directional velocity bug: the ball checks the pixel color through cameras
-# in 4 spatial directions, sometimes due to circular shape, 2 different cameras in different directions take the
-# pixel in account creating wrong change in the direction of velocity: either out of the border or in the
-# non-intuitive direction. You can fix these this by increasing the camera position from the variable 'focal'. This
-# will increase the distance between the cameras increasing accuracy, but the animation will look less realistic,
-# ball will not appear change its direction before colliding.
+# in 4 spatial directions, sometimes due to circular shape, 2 different cameras in different directions take the same
+# pixel in account creating wrong change in the direction of velocity: either out of the border or towards a
+# non-intuitive direction.
+# You can fix it by increasing the camera position from the variable 'focal'. This will increase the distance between 
+# the cameras increasing accuracy, but the animation will look less realistic, ball will appear to change its direction before colliding.
 
 import pygame as py
 import keyboard as key
